@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="controllers/indexcontroller.js" type="text/javascript"></script>
+        <title>Web upload</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form method="POST" onsubmit="enviaArquivo(this)" enctype="multipart/form-data" id="fdados">
+                Arquivo:
+                <p>
+                <input type="file" name="file"  /> <br>
+                <div>  
+                    Nome da Musica:  
+                    <p>
+                    <input type="text" placeholder="Musica" name="nMusica"/>
+                </div>
+                
+                <div> 
+                    Estilo:
+                    <p>
+                    <input type="text" placeholder="Estilo" name="estilo"/>
+                </div>
+                <div> 
+                    
+                    Nome do Artista:  
+                    <p>
+                    <input type="text" placeholder="Artista" name="nArtist"/>
+                </div>
+                <br>
+                <input type="submit" value="Upload"/>
+            </form>
+            <hr>
+            <div id="feedback" style="font-family: Arial; font-size: 14px; font-weight: bold "></div>
+        </div>
+    </body>
+</html>
