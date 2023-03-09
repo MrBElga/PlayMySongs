@@ -33,7 +33,7 @@ public class UpServlet extends HttpServlet {
         String pasta = "tmp";
         Part filePart = request.getPart("file");  // Lê o arquivo de upload
         String fileName = request.getParameter("nMusica");
-        fileName = fileName+"_"+request.getParameter("estilo")+"_"+request.getParameter("nArtist");
+        fileName = fileName+"_"+request.getParameter("estilo")+"_"+request.getParameter("nArtist")+".mp3";
         OutputStream out = null; InputStream filecontent = null;
 
         try {  //criando a pasta
