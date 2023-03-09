@@ -4,7 +4,7 @@
 
 <head>
     <script src="controllers/indexcontroller.js" type="text/javascript"></script>
-    <title>Web upload</title>
+    <title>Upload Songs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,22 +15,37 @@
             Arquivo:
             <p>
                 <input type="file" name="file" /> <br>
+            </p>
             <div>
                 Nome da Musica:
                 <p>
                     <input type="text" placeholder="Musica" name="nMusica" id="Musica" />
+                </p>
             </div>
 
             <div>
                 Estilo:
                 <p>
-                    <input type="text" placeholder="Estilo" name="estilo" />
+                    <select  name="estilo">
+                        <option value="Rock">Rock</option>
+                        <option value="Classic Rock">Classic Rock</option>
+                        <option value="Gótico">Gótico</option>
+                        <option value="Grunge">Grunge</option>
+                        <option value="Hard Rock">Hard Rock</option>
+                        <option value="Hardcore">Hardcore</option>
+                        <option value="Heavy Metal">Heavy Metal</option>
+                        <option value="MPB">MPB</option>
+                        <option value="House">House</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Chiptune">Chiptune</option>
+                    </select>
+                </p>
             </div>
             <div>
 
                 Nome do Artista:
                 <p>
-                    <input type="text" placeholder="Artista" name="nArtist" />
+                    <input type="text" placeholder="Artista" name="nArtist" id="Artista" />
             </div>
             <br>
             <input type="submit" value="Upload" />
