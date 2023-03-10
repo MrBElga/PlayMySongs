@@ -37,10 +37,11 @@ public class UpServlet extends HttpServlet {
         OutputStream out = null; InputStream filecontent = null;
 
         try {  //criando a pasta
-            String direct = "C:\\Users\\Admin\\Desktop\\PlayMySongs\\web";
-            File fpasta = new File(direct + "/" + pasta);
-            fpasta.mkdir();
-            out = new FileOutputStream(new File(fpasta.getAbsolutePath() + "/" + fileName));
+            
+            String destino = getServletContext().getRealPath("") + "/musicas";
+            
+            
+            out = new FileOutputStream(new File(destino + "/" + fileName));
             filecontent = filePart.getInputStream();
             int read = 0;
             byte[] bytes = new byte[1024];
