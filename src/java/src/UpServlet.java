@@ -33,13 +33,15 @@ public class UpServlet extends HttpServlet {
         String pasta = "tmp";
         Part filePart = request.getPart("file");  // Lê o arquivo de upload
         String fileName = request.getParameter("nMusica");
-        fileName = fileName+"_"+request.getParameter("estilo")+"_"+request.getParameter("nArtist");
+        fileName = fileName+"_"+request.getParameter("estilo")+"_"+request.getParameter("nArtist")+".mp3";
         OutputStream out = null; InputStream filecontent = null;
 
         try {  //criando a pasta
-            File fpasta = new File(getServletContext().getRealPath("/") + "/" + pasta);
-            fpasta.mkdir();
-            out = new FileOutputStream(new File(fpasta.getAbsolutePath() + "/" + fileName));
+            
+            String destino = getServletContext().getRealPath("") + "/musicas";
+            
+            
+            out = new FileOutputStream(new File(destino + "/" + fileName));
             filecontent = filePart.getInputStream();
             int read = 0;
             byte[] bytes = new byte[1024];
@@ -50,9 +52,10 @@ public class UpServlet extends HttpServlet {
             out.close();
             filecontent.close();
             response.getWriter().close();
-        } catch (Exception fne) {
+
             
-      
+        } catch (Exception fne) {
+
             response.getWriter().println("Erro ao receber o arquivo");
             response.getWriter().println("<br/> ERRO: " + fne.getMessage());
             response.getWriter().close();

@@ -1,0 +1,17 @@
+.form-select{
+    width: 24.5%!important;
+}
+
+.form-control{
+    width: 60%!important;
+    height: 40px!important;
+    display: flex!important;
+    align-items: center!important;
+    padding: 0!important;
+}
+
+.container{
+    margin-top: 5rem!important;
+    width: 50%!important;
+}
+
