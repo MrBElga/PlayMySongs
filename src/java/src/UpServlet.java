@@ -48,7 +48,7 @@ public class UpServlet extends HttpServlet {
             while ((read = filecontent.read(bytes)) != -1) {
                 out.write(bytes, 0, read);
             }
-            response.getWriter().println("Novo arquivo " + fileName + " criado na pasta " + pasta);
+            response.getWriter().println("arquivo " + fileName + " enviado");
             out.close();
             filecontent.close();
             response.getWriter().close();

@@ -32,7 +32,7 @@
                     style="background-color: rgba(68, 68, 68, 0.705); border-radius: 10px; color:#b3ecff;">
                     <form method="POST" onsubmit="enviaArquivo(this)" enctype="multipart/form-data" id="fdados">
                         <legend>Musica</legend>
-                        <p><input type="file" name="file" /> <br /></p>
+                        <p><input type="file" name="file" accept="audio/mp3" required/> <br /></p>
 
 
 
@@ -41,7 +41,7 @@
                                 <label for="nMusica">NOME DA MUSICA:</label>
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="Musica" name="nMusica "
-                                        placeholder="Nome Da Musica">
+                                        placeholder="Nome Da Musica" required>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                                 <label for="nMusica">NOME DO ARTISTA:</label>
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="Artista" name="nArtist "
-                                        placeholder="Nome Do Artista">
+                                        placeholder="Nome Do Artista" required >
                                 </div>
                             </div>
                         </div>
