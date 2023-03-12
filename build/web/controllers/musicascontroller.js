@@ -25,6 +25,7 @@ function listarMusicas(e) {
                 let audioc = document.createElement("audio");
                 let p = document.createElement("h4");
                 const info = arrMusicas[i].split("_");
+                info[2] = info[2].replace(".mp3","");
                 if(info[0].includes(buscaMusica.value)  && (info[1]===(buscaEstilo.value) || buscaEstilo.value === "") && info[2].includes(buscaArtista.value)) {
                     p.innerHTML = "Título: " + info[0] + "<br>Estilo: " + info[1] + "<br>Artista: " + info[2];
                     audioc.setAttribute("type","audio/mp3");
